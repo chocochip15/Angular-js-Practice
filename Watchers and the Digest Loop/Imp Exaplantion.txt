@@ -1,0 +1,14 @@
+Angular js uses java script event loops + Angular context 
+
+In this angular context we have WATCHERS or watch list which will contain all the old values and the new values of the data (eg.variable).
+
+the second add on by angular is DIGEST LOOP now digest loop will see to that whether Data has change or not if it is changed then DIGEST LOOP will change the value of that data in the DOM or in our controllers or where ever the data is present at that time.
+
+In this example we are using $watch is used onto the $scope to watch over the 'handle' variable for new and old values.
+
+
+if we are using setTimeout function of js(javascript) then our angular js watcher wont be able to look out for this change because this function works asynchronously but watcher only watches out for synchronous events.
+
+if we want this event to happen synchronously then we will have to add this event to our watcher manually by using $apply if we do so then then only will it work.
+
+An alternative is also used for setTimeout method of js in angular js and it is a service provided by angular js $timeout.

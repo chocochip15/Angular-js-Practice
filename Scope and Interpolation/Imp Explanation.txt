@@ -1,0 +1,8 @@
+when we use <h1>Hello {{ name + '. How are you?' }}</h1> the browser see this code and the angularjs  runs as name is sitting in the on of the $scope of our controller and it will convert the above statement in the DOM to <h1 class="ng-binding">Hello Tony. How are you??</h1> .
+You can actually see this happening in you chrome devlopers tools by pressing cntrl+shift+I and then you can select the ELEMENT in your dev console over their you can see the above conversion of code. 
+
+So as we can see ng-binding class of angular gets attached to our <h1> tag during our interpolation using {{}} .
+
+SERVICES USED-
+1.$scope-used for storing NAME variable inside the controller.
+2.$timeout- it used to change the content NAME to Everybody from tony.

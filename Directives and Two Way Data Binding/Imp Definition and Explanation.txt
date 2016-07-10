@@ -1,0 +1,11 @@
+Directives-It is an instruction to manipulate apice of DOM. Eg. ADD a class , HIDE this area , CREATE this area.
+
+
+Two way data binding - by two way data binding mean that if change anything inside our VIEW our MODEL shoould update and if we change our MODEL our view should update.
+
+New Directives used - ng-model=>The ngModel directive binds an input , select , textarea (or custom form control) to a property on the scope using NgModelController, which is created and exposed by this directive. ngModel is responsible for: Binding the view into the model . 
+
+
+Internally Angular uses Watchers and Digest LOOP to achive the tow way data binding . 
+
+to know more about the Watcher and Digest loop look into the net Example.
