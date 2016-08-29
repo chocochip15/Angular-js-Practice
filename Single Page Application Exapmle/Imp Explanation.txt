@@ -1,0 +1,32 @@
++Inside app.js
+------------
+We are creating our own module with the name 'myapp' and inside that module we are adding ngRoute .
+
+ngRoute module is used to navigate(route) between pages  , this module internally contains more services like $routeProvider which we are using in are example .
+
+Using this ngRoute module now injected in our app we will configure our Routing using config() method present in ngRoute Module.
+Inside config() we are defining an anonymous function and we are injecting $routeProvider service.
+
+Now Using $routeProvider  we are defining our routes (eg./) and we are also passing a JSON .
+Inside this JSON we are passing are TEMPLATEURL and CONTROLLER associated with it. 
+
+Now after this we will define are controllers main and second 
+Inside main controller we are just having a name.
+Inside Second Controller We are injecting $routeParams which will help us in getting the parameter values(:num) in our case present in the url inside our controller then we can use that value according to our wish.
+
+note-
+You can see this routePrams related code working when you will put /2 or /3 in front of /second in the URL. 
+
+Inside index.html
+--------------
+
+we will load our script in this patcular order only 
+<script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js"></script> ->First angular js Loads
+<script src="//code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>->Then the Reference for external module                                                                            ngRoute that we are using in our module.
+<script src="app.js"></script> -> At last our own module will load 
+
+
+# <div ng-view></div>
+ngView is a directive that complements the $route service by including the rendered template of the current route into the main layout (index.html) file. Every time the current route changes, the included view changes with it according to the configuration of the $route service.
+
+Inside other to html we will have only the template code that we have to change according to the button click event.This is done using simple interpolation of the values that we have declared in our controllers.
